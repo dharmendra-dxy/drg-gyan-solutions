@@ -18,3 +18,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.bg-curve {
+clip-path: ellipse(100% 55% at 50% 25%);
+}
+
+
