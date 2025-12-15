@@ -1,6 +1,6 @@
 import { Star, X } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import Input from "../common/input";
 
 interface Props {
   isOpen: boolean;
@@ -24,16 +24,15 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/50 transition-opacity" />
-      <div className="relative z-50 mx-4 w-full max-w-[1100px] overflow-hidden rounded-2xl h-[90vh] lg:h-[70vh]">
-        <div className="w-full h-full flex flex-col lg:flex-row bg-white p-6">
+      <div className="relative z-50 mx-4 w-full max-w-[1100px] overflow-hidden rounded-2xl h-[90vh] lg:h-fit">
+        <div className="w-full h-full flex flex-col lg:flex-row gap-8 bg-white p-6">
           {/* Left */}
           <div className="w-full lg:w-[40%]  h-[30%] lg:h-full overflow-hidden">
             <div>
               <h3 className="hidden lg:block lg:text-2xl font-semibold text-center">
-                Turn Chat into sales with{" "}
-                <span className="text-green-500">Maglo</span>
+                Transform Your Research Into a <span className="text-primary">Publication-Ready Masterpiece</span> 
               </h3>
-              {modalHeading}
+              {modalHeading} 
             </div>
             <Image
               src="/whatsapp/whatsapp-modal.jpg"
@@ -42,79 +41,8 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
               height={400}
               className="-mt-12 lg:mt-0"
             />
-            <div className="hidden lg:block absolute bottom-3.5 mx-6">
-              <p className="text-gray-600">
-                Trusted by{" "}
-                <span className="font-semibold text-blue-500">
-                  100+ Business{" "}
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Right side */}
-          <div className="w-full lg:w-[60%] h-[70%] lg:h-full">
-            <button 
-              className="absolute right-8"
-              onClick={handleClose}
-            >
-              <X className="size-5"/>
-            </button>
-            <div>
-              <Image
-                src="/maglo-crm-v3/maglo-logo.webp"
-                alt="maglo-logo"
-                width={80}
-                height={80}
-              />
-              <p className="hidden lg:block text-gray-600 text-xs lg:text-sm mt-2">
-                Register now to get free expert counseling and personalized
-                admission support. Unlock access to exclusive scholarships and
-                make your study journey easier!
-              </p>
-            </div>
-
-            <div className="my-6">
-              <p className="text-gray-600 font-semibold">
-                Fill Your details to start using{" "}
-                <span className="text-blue-500 font-bold">Maglo CRM</span>{" "}
-              </p>
-            </div>
-
-            {/* Registaration form */}
-            <form className="space-y-3">
-              <div className="grid grid-cols-1 lg:grid-cols-2  gap-3">
-                <input
-                  className="px-4 py-1.5 focus:ring-blue-300 focus:ring focus:border-none outline-none border border-gray-300 rounded-lg w-full placeholder:text-sm"
-                  placeholder="Enter Full Name"
-                />
-
-                <input
-                  className="px-4 py-1.5 focus:ring-blue-300 focus:ring focus:border-none outline-none border border-gray-300 rounded-lg w-full placeholder:text-sm"
-                  placeholder="Enter Email"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 gap-3">
-                <input
-                  className="px-4 py-1.5 focus:ring-blue-300 focus:ring focus:border-none outline-none border border-gray-300 rounded-lg w-full placeholder:text-sm"
-                  placeholder="Enter Phone Number"
-                />
-
-                <input
-                  className="px-4 py-1.5 focus:ring-blue-300 focus:ring focus:border-none outline-none border border-gray-300 rounded-lg w-full placeholder:text-sm"
-                  placeholder="Enter Team Size"
-                />
-              </div>
-
-              <div className="flex items-center justify-center mt-4 lg:mt-6">
-                <button className="px-6 py-2 rounded-lg bg-blue-500 text-white flex items-center gap-2 text-sm md:text-base hover:cursor-pointer hover:shadow-lg transition-all duration-300 ">
-                  Submit
-                </button>
-              </div>
-            </form>
-
-            <div className="absolute bottom-3 hidden lg:flex  gap-4 w-full ">
+            {/* user ratings */}
+            <div className="hidden lg:flex  gap-4 w-full ">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2">
@@ -123,7 +51,7 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
                       <Star size={14} className="text-[#1863ff]" />
                     </span>
                     <span className="-ml-1 font-medium">4.1</span>
-                    <span className="text-slate-400">By Over 2k+ Users</span>
+                    <span className="text-slate-400">By Over 100+ Students</span>
                   </div>
                 </div>
               </div>
@@ -142,6 +70,62 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Right side */}
+          <div className="w-full lg:w-[60%] h-[70%] lg:h-full">
+            <button className="absolute right-8" onClick={handleClose}>
+              <X className="size-5" />
+            </button>
+            <div>
+              <Image
+                src="/maglo-crm-v3/maglo-logo.webp"
+                alt="maglo-logo"
+                width={80}
+                height={80}
+              />
+              <p className="hidden lg:block text-gray-600 text-xs lg:text-sm mt-2">
+                We provide professional support in research design, editing, proofreading, and academic mentoring - helping you learn, grow, and achieve academic excellence with integrity.
+              </p>
+            </div>
+
+            {/* Registaration form */}
+            <form>
+              {/* user details */}
+              <div className="mt-4">
+                <p className="text-gray-400 font-semibold">Enter Your details</p>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2  gap-3 my-3">
+                  <Input placeholder="Enter Full Name"/>
+                  <Input placeholder="Enter Email"/>
+                </div>
+
+                <div className="grid grid-cols-1 gap-3">
+                  <Input placeholder="Enter Phone Number"/>
+                </div>
+              </div>
+              {/* Project details */}
+              <div className="mt-8">
+                <p className="text-gray-400 font-semibold">
+                  Enter Your Requirements
+                </p>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2  gap-3 my-3">
+                  <Input placeholder="Select Your Course"/>
+
+                  <Input placeholder="Select Services"/>
+                </div>
+
+                <div className="grid grid-cols-1 gap-3">
+                  <Input placeholder="Enter Paper Topic"/>
+                </div>
+              </div>
+              <div className="flex items-center justify-center mt-4 lg:mt-6">
+                <button className="px-6 py-2 rounded-lg bg-primary text-white flex items-center gap-2 text-sm md:text-base hover:cursor-pointer hover:shadow-lg transition-all duration-300 ">
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
