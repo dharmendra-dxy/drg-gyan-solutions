@@ -9,6 +9,9 @@ import WhatsappIntegration from "./landing-page-v2/whatsapp-integration";
 import EdtechCtaWhatsapp from "./landing-page-v2/edtech-cta-whatsapp";
 import Modal from "./landing-page-v2/modal";
 import Navbar from "./landing-page-v2/navbar";
+import NavbarV2 from "./landing-page-v2/navbar-v2";
+import HeroSectionV2 from "./landing-page-v2/hero-section-v2";
+import Services from "./landing-page-v2/services";
 
 const MainPageV2 = () => {
   // ====================== MODAL use state ======================
@@ -28,8 +31,11 @@ const MainPageV2 = () => {
 
   return (
     <div>
-      <Navbar handleOpen={handleModalOpen} />
-      <HeroSection handleOpen={handleModalOpen} />
+      <NavbarV2/>
+      <HeroSectionV2/>
+      {/* <Navbar handleOpen={handleModalOpen} /> */}
+      {/* <HeroSection handleOpen={handleModalOpen} /> */}
+      <Services/>
       <FeaturesSection />
       <DetailsSections />
       <EdtechCta handleOpen={handleModalOpen} />

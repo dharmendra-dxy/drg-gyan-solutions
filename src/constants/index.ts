@@ -1,7 +1,58 @@
-import { CreditCard, Megaphone, Zap } from "lucide-react";
+import {
+  CreditCard,
+  Megaphone,
+  Zap,
+  Settings,
+  Layers,
+  Wrench,
+  ShieldCheck,
+  Package,
+  BarChart3,
+} from "lucide-react";
+
+/*----------------------------------- Services data ------------------------------------------------------*/
+
+export const services = [
+  {
+    title: "Production and Assembly",
+    description:
+      "Details on production processes, assembly, capacity, and product types.",
+    icon: Settings,
+  },
+  {
+    title: "Custom Manufacturing",
+    description:
+      "Custom product creation with design and customization options.",
+    icon: Layers,
+  },
+  {
+    title: "Quality Control",
+    description:
+      "Procedures and systems in place to ensure high product quality.",
+    icon: Wrench,
+  },
+  {
+    title: "Technology and Innovation",
+    description:
+      "Details on the latest manufacturing technologies and innovations.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Packaging and Logistics",
+    description:
+      "Packaging and logistics for shipping to customers and distributors.",
+    icon: Package,
+  },
+  {
+    title: "Consulting Market Research",
+    description:
+      "Services to help companies understand market needs and strategy.",
+    icon: BarChart3,
+  },
+];
+
 
 /*-----------------------------------FEATURES DATA------------------------------------------*/
-/*-----------------------------------------------------------------------------------------*/
 export interface Features {
   icon?: React.ComponentType<{ className?: string }>;
   title: string;
@@ -51,7 +102,6 @@ export const features: Features[] = [
 ];
 
 /*-----------------------------------DETAILS DATA------------------------------------------*/
-/*-----------------------------------------------------------------------------------------*/
 
 export interface Details {
   title: string;
@@ -169,7 +219,6 @@ export const detailsData: Details[] = [
 ];
 
 /*-----------------------------------WHATS APP INTEGRATION DATA------------------------------*/
-/*-----------------------------------------------------------------------------------------*/
 
 export interface WhatsappIntegrationType {
   heading: string;

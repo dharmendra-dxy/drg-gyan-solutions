@@ -16,7 +16,7 @@ export const FeaturesCard = ({
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
 
-      <div className={`bg-blue-100 p-4`}>
+      <div className={`bg-secondary p-4`}>
         {Icon &&<Icon className="size-8 text-white mb-2" />}
         <h3 className="text-lg font-semibold mb-3">{title}</h3>
         <p className="text-sm text-gray-600">{description}</p>
