@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "../common/button";
 import Container from "../common/container";
 
@@ -8,11 +9,14 @@ export default function NavbarV2() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2 font-semibold text-lg">
-          <span className="h-8 w-8 rounded-full bg-emerald-800 text-white flex items-center justify-center">
-            P
-          </span>
-          Prodmast
+        <div className="flex items-center font-semibold text-lg">
+          <Image
+            src="/landing-page/gyan-solution-logo.png"
+            alt="gs-logo"
+            width={40}
+            height={40}
+          />
+          GyanSolution
         </div>
 
         {/* Desktop Nav */}
@@ -25,12 +29,9 @@ export default function NavbarV2() {
         </nav>
 
         {/* CTA */}
-        <div className="hidden md:block">
-          <Button>Sign Up</Button>
+        <div className="">
+          <Button>Get Quotations</Button>
         </div>
-
-        {/* Mobile Menu Placeholder */}
-        <button className="md:hidden text-gray-700">☰</button>
       </Container>
     </header>
   );

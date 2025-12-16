@@ -9,7 +9,7 @@ interface Props {
 
 const EdtechCta = ({handleOpen}: Props) => {
   return (
-    <div className="w-full my-12 py-12  bg-blue-100">
+    <div className="w-full py-12  bg-blue-100">
       <Container>
         <div className="text-center">
           <h2 className="text-2xl lg:text-3xl font-semibold">

@@ -8,7 +8,7 @@ const DetailsSections = () => {
   return (
     <div className="my-8">
       <Container>
-        <div className="space-y-24 w-full">
+        <div className="space-y-8 w-full">
           {detailsData.map((details: Details, idx: number) => (
             <DetailsCard
               data={details}

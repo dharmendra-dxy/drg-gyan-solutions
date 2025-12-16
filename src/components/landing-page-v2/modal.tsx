@@ -1,6 +1,7 @@
 import { Star, X } from "lucide-react";
 import Image from "next/image";
 import Input from "../common/input";
+import Button from "../common/button";
 
 interface Props {
   isOpen: boolean;
@@ -15,7 +16,7 @@ const avatars = [
   "/users/user-4.webp",
   "/users/user-18.webp",
   "/users/user-5.webp",
-  "/users/user-10.webp",
+  "/users/user-19.webp",
 ];
 
 const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
@@ -25,24 +26,27 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/50 transition-opacity" />
       <div className="relative z-50 mx-4 w-full max-w-[1100px] overflow-hidden rounded-2xl h-[90vh] lg:h-fit">
-        <div className="w-full h-full flex flex-col lg:flex-row gap-8 bg-white p-6">
+        <div className="w-full h-full flex flex-col lg:flex-row lg:gap-8 bg-white p-6">
           {/* Left */}
-          <div className="w-full lg:w-[40%]  h-[30%] lg:h-full overflow-hidden">
+          <div className="w-full lg:w-[40%] h-[45%] lg:h-full overflow-hidden">
+            <button className="lg:hidden absolute top-4 z-20 right-4" onClick={handleClose}>
+              <X className="size-5" />
+            </button>
             <div>
-              <h3 className="hidden lg:block lg:text-2xl font-semibold text-center">
-                Transform Your Research Into a <span className="text-primary">Publication-Ready Masterpiece</span> 
+              <h3 className="text-xl lg:text-2xl font-semibold text-center">
+                Transform Your Research Into a <span className="text-emerald-800">Publication-Ready Masterpiece</span> 
               </h3>
-              {modalHeading} 
+              {modalHeading}
             </div>
             <Image
-              src="/whatsapp/whatsapp-modal.jpg"
+              src="/landing-page/details-4.jpeg"
               alt="banner"
               width={400}
               height={400}
-              className="-mt-12 lg:mt-0"
+              className=""
             />
             {/* user ratings */}
-            <div className="hidden lg:flex  gap-4 w-full ">
+            <div className="absolute bottom-4 hidden lg:flex gap-4 w-full ">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3 text-sm text-slate-600">
                   <div className="inline-flex items-center gap-2">
@@ -73,16 +77,17 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
           </div>
 
           {/* Right side */}
-          <div className="w-full lg:w-[60%] h-[70%] lg:h-full">
-            <button className="absolute right-8" onClick={handleClose}>
+          <div className="w-full lg:w-[60%] h-[65%] lg:h-full">
+            <button className="hidden lg:block absolute right-8" onClick={handleClose}>
               <X className="size-5" />
             </button>
             <div>
               <Image
-                src="/maglo-crm-v3/maglo-logo.webp"
-                alt="maglo-logo"
+                src="/landing-page/gyan-solution-logo.png"
+                alt="gs-logo"
                 width={80}
                 height={80}
+                className="hidden lg:block"
               />
               <p className="hidden lg:block text-gray-600 text-xs lg:text-sm mt-2">
                 We provide professional support in research design, editing, proofreading, and academic mentoring - helping you learn, grow, and achieve academic excellence with integrity.
@@ -121,9 +126,7 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
                 </div>
               </div>
               <div className="flex items-center justify-center mt-4 lg:mt-6">
-                <button className="px-6 py-2 rounded-lg bg-primary text-white flex items-center gap-2 text-sm md:text-base hover:cursor-pointer hover:shadow-lg transition-all duration-300 ">
-                  Submit
-                </button>
+                <Button type="submit">Submit</Button>
               </div>
             </form>
           </div>

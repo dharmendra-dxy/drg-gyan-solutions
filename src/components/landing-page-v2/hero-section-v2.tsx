@@ -86,17 +86,19 @@ export default function Hero() {
     <section className="bg-gray-50 pt-20 pb-28">
       <Container>
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-900">
-            The Future of Manufacturing{" "}
+             End-to-End Thesis <br />{" "}
             <span className="text-emerald-800">
-              with Latest Technology
+              Research Paper & Patent Support
             </span>
           </h1>
 
           <p className="mt-4 text-gray-600 text-sm sm:text-base">
-            Expert tech to elevate your manufacturing. Let’s take your
-            business further.
+            We help M.Tech and PhD scholars transform ideas into high-quality
+            research outputs. From topic selection to final submission,
+            publication, and patent drafting—our academic experts ensure
+            accuracy, originality, and timely delivery.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
@@ -107,7 +109,7 @@ export default function Hero() {
           <div className="mt-6 flex items-center justify-center gap-2 text-sm">
             <div className="text-yellow-400">★★★★★</div>
             <span className="text-gray-600">
-              5.0 from <span className="underline">80+ reviews</span>
+              4.1 from <span className="underline">80+ reviews</span>
             </span>
           </div>
         </div>
