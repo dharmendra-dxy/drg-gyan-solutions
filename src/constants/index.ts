@@ -1,7 +1,4 @@
 import {
-  CreditCard,
-  Megaphone,
-  Zap,
   Settings,
   Layers,
   Wrench,
@@ -56,58 +53,6 @@ export const services = [
   },
 ];
 
-/* 
--------------------------------------------
-Features Data
--------------------------------------------
-*/
-export interface Features {
-  icon?: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-  features: string[];
-}
-
-export const features: Features[] = [
-  {
-    icon: Zap,
-    title: "Move fast with your sales processes",
-    description:
-      "Elevate sales efficiency, identify course sales opportunities, and convert more learners",
-    features: [
-      "Sales Execution & Automation",
-      "Sales Tracking & Performance",
-      "Sales Process Designer",
-      "Sales Reporting",
-      "Field Force Automation",
-    ],
-  },
-  {
-    icon: Megaphone,
-    title: "Get the word out with your marketing",
-    description:
-      "Attract right learners, hyper-personalize engagements based on insights, and optimize enrollment marketing spends",
-    features: [
-      "Lead Capture & Centralization",
-      "Marketing Automation",
-      "Workflow Automation",
-      "Advanced Campaign Management",
-      "Raw Data Management",
-    ],
-  },
-  {
-    icon: CreditCard,
-    title: "Make fee payments faster and easier",
-    description:
-      "Run discount and scholarship campaigns, generate payment links, and track sales campaign effectiveness",
-    features: [
-      "Extensive Fee Workflows",
-      "Payment Link Generation",
-      "Payment Settlement in Multiple Accounts",
-      "Reconciliation & Settlement Reports",
-    ],
-  },
-];
 
 /* 
 -------------------------------------------
@@ -115,6 +60,11 @@ Details Data
 -------------------------------------------
 */
 
+/* 
+-------------------------------------------
+Details sections Data
+-------------------------------------------
+*/
 export interface Details {
   title: string;
   heading: string;

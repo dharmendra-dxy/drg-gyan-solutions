@@ -1,28 +1,16 @@
-
 import { Linkedin, Instagram, Facebook } from "lucide-react";
 import Container from "../common/container";
+import Image from "next/image";
 
-
-function FooterColumn({
-  title,
-  links,
-}: {
-  title: string;
-  links: string[];
-}) {
+function FooterColumn({ title, links }: { title: string; links: string[] }) {
   return (
     <div>
-      <h4 className="text-sm font-semibold text-white">
-        {title}
-      </h4>
+      <h4 className="text-sm font-semibold text-white">{title}</h4>
 
       <ul className="mt-4 space-y-3 text-sm text-gray-300">
         {links.map((link) => (
           <li key={link}>
-            <a
-              href="#"
-              className="hover:text-white transition"
-            >
+            <a href="#" className="hover:text-white transition">
               {link}
             </a>
           </li>
@@ -32,12 +20,7 @@ function FooterColumn({
   );
 }
 
-
-function SocialIcon({
-  icon: Icon,
-}: {
-  icon: React.ElementType;
-}) {
+function SocialIcon({ icon: Icon }: { icon: React.ElementType }) {
   return (
     <a
       href="#"
@@ -48,8 +31,6 @@ function SocialIcon({
   );
 }
 
-
-
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-300">
@@ -58,16 +39,19 @@ export default function Footer() {
         <div className="grid gap-10 py-20 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 text-lg font-semibold text-white">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500 text-black">
-                P
-              </span>
-              Prodmast
+            <div className="flex items-center font-semibold text-lg">
+              <Image
+                src="/landing-page/gyan-solution-logo.png"
+                alt="gs-logo"
+                width={40}
+                height={40}
+              />
+              GyanSolution
             </div>
 
             <p className="mt-4 text-sm text-emerald-200/80 max-w-xs">
-              Our solutions make production faster and cheaper.
-              Contact us for more information.
+              Our solutions make production faster and cheaper. Contact us for
+              more information.
             </p>
           </div>
 
@@ -101,9 +85,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-white">
-              Get In Touch
-            </h4>
+            <h4 className="text-sm font-semibold text-white">Get In Touch</h4>
 
             <a
               href="mailto:hallo@prodmast.com"
@@ -125,7 +107,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col gap-4 py-6 text-sm text-emerald-200/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2024 Prodmast, All rights reserved</p>
+          <p>© 2025 GyanSolution, All rights reserved</p>
 
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">
