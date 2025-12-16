@@ -10,8 +10,15 @@ import {
   BarChart3,
 } from "lucide-react";
 
-/*----------------------------------- Services data ------------------------------------------------------*/
 
+export const MODAL_DELAY = 100*1000;
+
+
+/* 
+-------------------------------------------
+Services Data
+-------------------------------------------
+*/
 export const services = [
   {
     title: "Production and Assembly",
@@ -52,7 +59,11 @@ export const services = [
 ];
 
 
-/*-----------------------------------FEATURES DATA------------------------------------------*/
+/* 
+-------------------------------------------
+Features Data
+-------------------------------------------
+*/
 export interface Features {
   icon?: React.ComponentType<{ className?: string }>;
   title: string;
@@ -101,7 +112,12 @@ export const features: Features[] = [
   },
 ];
 
-/*-----------------------------------DETAILS DATA------------------------------------------*/
+
+/* 
+-------------------------------------------
+Details Data
+-------------------------------------------
+*/
 
 export interface Details {
   title: string;
@@ -218,8 +234,13 @@ export const detailsData: Details[] = [
   },
 ];
 
-/*-----------------------------------WHATS APP INTEGRATION DATA------------------------------*/
 
+
+/* 
+-------------------------------------------
+Whatsapp integration Data
+-------------------------------------------
+*/
 export interface WhatsappIntegrationType {
   heading: string;
   description: string;

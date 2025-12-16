@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+
 import HeroSection from "./landing-page-v2/hero-section";
 import FeaturesSection from "./landing-page-v2/features-section";
 import DetailsSections from "./landing-page-v2/details-sections";
@@ -12,30 +12,29 @@ import Navbar from "./landing-page-v2/navbar";
 import NavbarV2 from "./landing-page-v2/navbar-v2";
 import HeroSectionV2 from "./landing-page-v2/hero-section-v2";
 import Services from "./landing-page-v2/services";
+import UseModal from "@/hooks/use-modal";
+
 
 const MainPageV2 = () => {
-  // ====================== MODAL use state ======================
-  const [isModalOpen, setIsModalOpen] = useState(true);
-  const [modalHeading, setModalHeading] = useState("");
 
-  const handleModalOpen = (heading?: string) => {
-    heading && setModalHeading(heading);
-    setIsModalOpen(true);
-  };
+  const {
+    isModalOpen,
+    modalHeading,
+    modalSubHeading,
+    handleModalClose,
+    handleModalOpen
+  } = UseModal()
 
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-    setModalHeading("");
-  };
-  // ============================================
 
   return (
     <div>
-      <NavbarV2/>
-      <HeroSectionV2/>
+      <NavbarV2 />
+      <HeroSectionV2 />
+      
       {/* <Navbar handleOpen={handleModalOpen} /> */}
       {/* <HeroSection handleOpen={handleModalOpen} /> */}
-      <Services/>
+
+      <Services />
       <FeaturesSection />
       <DetailsSections />
       <EdtechCta handleOpen={handleModalOpen} />
