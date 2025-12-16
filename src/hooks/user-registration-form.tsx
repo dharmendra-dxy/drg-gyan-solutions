@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
+interface Props {
+  thankyouPageUrl? : string;
+}
 
-const UseRegistartionForm = () => {
+const UseRegistartionForm = ({thankyouPageUrl}: Props) => {
   const router = useRouter();
   const params = useSearchParams();
 
