@@ -83,12 +83,12 @@ const ContactPage = () => {
     "/users/user-19.webp",
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
