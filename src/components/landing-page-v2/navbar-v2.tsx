@@ -2,7 +2,12 @@ import Image from "next/image";
 import Button from "../common/button";
 import Container from "../common/container";
 
-const navLinks = ["Home", "About", "Services", "Contact"];
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about-us", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function NavbarV2() {
   return (
@@ -21,12 +26,12 @@ export default function NavbarV2() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-700">
-          {navLinks.map((item) => (
-            <a key={item} href="#" className="hover:text-emerald-800">
-              {item}
-            </a>
-          ))}
-        </nav>
+  {navLinks.map(({ href, label }) => (
+    <a key={label} href={href} className="hover:text-emerald-800">
+      {label}
+    </a>
+  ))}
+</nav>
 
         {/* CTA */}
         <div className="">
