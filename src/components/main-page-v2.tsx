@@ -2,7 +2,7 @@
 
 import DetailsSections from "./landing-page-v2/details-sections";
 import Modal from "./landing-page-v2/modal";
-import NavbarV2 from "./landing-page-v2/navbar-v2";
+
 import HeroSectionV2 from "./landing-page-v2/hero-section-v2";
 import Services from "./landing-page-v2/services";
 import UseModal from "@/hooks/use-modal";
@@ -22,7 +22,6 @@ const MainPageV2 = () => {
 
   return (
     <div>
-      <NavbarV2 />
       <HeroSectionV2 />
       <Services />
       <DetailsSections />
@@ -33,7 +32,7 @@ const MainPageV2 = () => {
         handleOpen={handleModalOpen}
         handleClose={handleModalClose}
       />
-      <Footer/>
+     
     </div>
   );
 };

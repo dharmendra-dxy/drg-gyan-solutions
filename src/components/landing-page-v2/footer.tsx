@@ -1,6 +1,7 @@
 import { Linkedin, Instagram, Facebook } from "lucide-react";
 import Container from "../common/container";
 import Image from "next/image";
+import Link from "next/link";
 
 function FooterColumn({ title, links }: { title: string; links: string[] }) {
   return (
@@ -36,19 +37,18 @@ export default function Footer() {
     <footer className="bg-black text-gray-300">
       <Container>
         {/* Top Section */}
-        <div className="grid gap-10 py-20 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 py-20 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center font-semibold text-lg p-1 bg-white">
+            <Link href="/" className="flex items-center font-semibold text-lg p-1 bg-white w-fit">
               <Image
                 src="/logo.png"
                 alt="gs-logo"
                 width={140}
                 height={40}
-
               />
               
-            </div>
+            </Link>
 
             <p className="mt-4 text-sm max-w-xs">
               Our solutions make production faster and cheaper. Contact us for
@@ -60,17 +60,6 @@ export default function Footer() {
           <FooterColumn
             title="Company"
             links={["About Us", "Customers", "Newsroom", "Events"]}
-          />
-
-          {/* Industries */}
-          <FooterColumn
-            title="Industries"
-            links={[
-              "Precision Metalforming",
-              "Industrial Manufacturing",
-              "High Tech & Electronics",
-              "Aerospace",
-            ]}
           />
 
           {/* Products */}

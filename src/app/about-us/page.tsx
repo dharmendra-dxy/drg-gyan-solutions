@@ -102,8 +102,6 @@ const AboutPage = () => {
   ];
 
   return (
-    <>
-      <NavbarV2 />
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hero Section */}
         <div className="bg-linear-to-r from-emerald-700 to-emerald-800 text-white py-20 px-6">
@@ -234,7 +232,6 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "../common/button";
 import Container from "../common/container";
+import Link from "next/link";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,9 +15,9 @@ export default function NavbarV2() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center font-semibold text-lg">
+        <Link href="/" className="flex items-center font-semibold text-lg">
           <Image src="/logo.png" alt="gs-logo" width={140} height={40} />
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-700">
