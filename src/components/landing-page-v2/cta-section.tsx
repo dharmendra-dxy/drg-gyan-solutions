@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const CtaSection = () => {
   return (
-    <div className="w-full bg-emerald-950 py-12">
+    <div className="w-full bg-linear-to-r from-emerald-700 to-emerald-800 py-12">
       <Container className="flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

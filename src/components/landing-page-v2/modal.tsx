@@ -34,7 +34,7 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
             </button>
             <div>
               <h3 className="text-xl lg:text-2xl font-semibold text-center">
-                Transform Your Research Into a <span className="text-emerald-800">Publication-Ready Masterpiece</span> 
+                Transform Your Research Into a <span className="text-emerald-700">Publication-Ready Masterpiece</span> 
               </h3>
               {modalHeading}
             </div>
@@ -83,7 +83,7 @@ const Modal = ({ isOpen, modalHeading, handleOpen, handleClose }: Props) => {
             </button>
             <div>
               <Image
-                src="/landing-page/gyan-solution-logo.png"
+                src="/logo.png"
                 alt="gs-logo"
                 width={80}
                 height={80}

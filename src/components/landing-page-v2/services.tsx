@@ -8,7 +8,7 @@ import ServiceCard from "./service-card";
 
 export default function Services() {
   return (
-    <section className="bg-emerald-950 py-24">
+    <section className="bg-linear-to-r from-emerald-700 to-emerald-800 py-24">
       <Container>
         {/* Heading */}
         <motion.div

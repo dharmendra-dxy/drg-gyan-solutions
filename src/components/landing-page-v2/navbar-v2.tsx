@@ -15,23 +15,17 @@ export default function NavbarV2() {
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
         <div className="flex items-center font-semibold text-lg">
-          <Image
-            src="/landing-page/gyan-solution-logo.png"
-            alt="gs-logo"
-            width={40}
-            height={40}
-          />
-          GyanSolution
+          <Image src="/logo.png" alt="gs-logo" width={140} height={40} />
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-700">
-  {navLinks.map(({ href, label }) => (
-    <a key={label} href={href} className="hover:text-emerald-800">
-      {label}
-    </a>
-  ))}
-</nav>
+          {navLinks.map(({ href, label }) => (
+            <a key={label} href={href} className="hover:text-emerald-800">
+              {label}
+            </a>
+          ))}
+        </nav>
 
         {/* CTA */}
         <div className="">

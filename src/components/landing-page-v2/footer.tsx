@@ -39,17 +39,18 @@ export default function Footer() {
         <div className="grid gap-10 py-20 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center font-semibold text-lg">
+            <div className="flex items-center font-semibold text-lg p-1 bg-white">
               <Image
-                src="/landing-page/gyan-solution-logo.png"
+                src="/logo.png"
                 alt="gs-logo"
-                width={40}
+                width={140}
                 height={40}
+
               />
-              GyanSolution
+              
             </div>
 
-            <p className="mt-4 text-sm text-emerald-200/80 max-w-xs">
+            <p className="mt-4 text-sm max-w-xs">
               Our solutions make production faster and cheaper. Contact us for
               more information.
             </p>
@@ -89,7 +90,7 @@ export default function Footer() {
 
             <a
               href="mailto:hallo@prodmast.com"
-              className="mt-4 block text-sm text-emerald-200 hover:text-white underline-offset-4 hover:underline"
+              className="mt-4 block text-sm  hover:text-white underline-offset-4 hover:underline"
             >
               hallo@prodmast.com
             </a>

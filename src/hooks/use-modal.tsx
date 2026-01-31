@@ -14,7 +14,6 @@ const UseModal = () => {
   const [modalHeading, setModalHeading] = useState("");
   const [modalSubHeading, setModalSubHeading] = useState("");
 
-
   /* 
   ---------------------------------------------------------
   Use effect and useRef

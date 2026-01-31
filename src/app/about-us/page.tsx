@@ -106,7 +106,7 @@ const AboutPage = () => {
       <NavbarV2 />
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-emerald-700 to-emerald-800 text-white py-20 px-6">
+        <div className="bg-linear-to-r from-emerald-700 to-emerald-800 text-white py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-5xl font-bold mb-6">About GyanSolution</h1>
             <p className="text-xl text-blue-100 max-w-3xl leading-relaxed">

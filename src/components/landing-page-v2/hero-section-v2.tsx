@@ -14,7 +14,7 @@ function StatDarkCard({
 }) {
   return (
     <div
-      className={`rounded-3xl bg-emerald-900 p-6 text-white flex flex-col justify-end ${className}`}
+      className={`rounded-3xl bg-emerald-700 p-6 text-white flex flex-col justify-end ${className}`}
     >
       <h3 className="text-3xl font-semibold">{title}</h3>
       <p className="mt-2 text-sm opacity-80">{description}</p>
@@ -89,7 +89,7 @@ export default function Hero() {
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-900">
              End-to-End Thesis <br />{" "}
-            <span className="text-emerald-800">
+            <span className="text-emerald-700">
               Research Paper & Patent Support
             </span>
           </h1>
